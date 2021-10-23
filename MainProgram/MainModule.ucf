@@ -1,0 +1,11 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "clk" LOC = P50;
+NET "reset" LOC = P133;
+NET "rx" LOC = P111;
+NET "tx" LOC = P112;
+NET "miso" LOC = P83;
+NET "mosi" LOC = P79;
+NET "cs" LOC = P85;
+NET "sclk" LOC = P81;

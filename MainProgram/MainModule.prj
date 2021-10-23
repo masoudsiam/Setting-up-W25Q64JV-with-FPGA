@@ -1,0 +1,7 @@
+vhdl work "UART_Transmitter.vhd"
+vhdl work "UART_Receiver.vhd"
+vhdl work "SPI_Master.vhd"
+vhdl work "Output_Data_Collector.vhd"
+vhdl work "Input_Data_Collector.vhd"
+vhdl work "BaudRate_Generator.vhd"
+vhdl work "MainModule.vhd"

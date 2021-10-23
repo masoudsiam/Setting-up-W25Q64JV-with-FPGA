@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">M:\github\fpga\W25Q64JV\MainProgram\MainModule.vhd</arg>&quot; line <arg fmt="%s" index="2">66</arg>: Output port &lt;<arg fmt="%s" index="3">done_tick</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Output_Data_Collector_unit</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_reg_32</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Input_Data_Collector_unit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_reg_33</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Input_Data_Collector_unit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_reg_34</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Input_Data_Collector_unit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_reg_35</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Input_Data_Collector_unit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_reg_36</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Input_Data_Collector_unit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_reg_37</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Input_Data_Collector_unit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_reg_38</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Input_Data_Collector_unit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_reg_39</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Input_Data_Collector_unit</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_reg_32</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Input_Data_Collector</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_reg_33</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Input_Data_Collector</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_reg_34</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Input_Data_Collector</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_reg_35</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Input_Data_Collector</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_reg_36</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Input_Data_Collector</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_reg_37</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Input_Data_Collector</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_reg_38</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Input_Data_Collector</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">data_reg_39</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Input_Data_Collector</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">Input_Data_Collector_unit/counter_reg_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">MainModule</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+</messages>
+

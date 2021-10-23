@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "M:/github/fpga/W25Q64JV/MainProgram/Output_Data_Collector_sim_isim_beh.exe" -prj "M:/github/fpga/W25Q64JV/MainProgram/Output_Data_Collector_sim_beh.prj" "work.Output_Data_Collector_sim" 

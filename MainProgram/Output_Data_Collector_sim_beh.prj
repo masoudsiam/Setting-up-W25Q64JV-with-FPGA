@@ -1,0 +1,2 @@
+vhdl work "Output_Data_Collector.vhd"
+vhdl work "Output_Data_Collector_sim.vhd"

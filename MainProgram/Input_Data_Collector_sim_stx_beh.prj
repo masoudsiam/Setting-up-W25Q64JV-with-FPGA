@@ -1,0 +1,2 @@
+vhdl isim_temp "Input_Data_Collector.vhd"
+vhdl isim_temp "Input_Data_Collector_sim.vhd"

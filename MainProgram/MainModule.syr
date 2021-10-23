@@ -1,0 +1,765 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.45 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.47 secs
+ 
+--> Reading design: MainModule.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "MainModule.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "MainModule"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-tqg144
+
+---- Source Options
+Top Module Name                    : MainModule
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "M:\github\fpga\W25Q64JV\MainProgram\UART_Transmitter.vhd" into library work
+Parsing entity <UART_Transmitter>.
+Parsing architecture <Behavioral> of entity <uart_transmitter>.
+Parsing VHDL file "M:\github\fpga\W25Q64JV\MainProgram\UART_Receiver.vhd" into library work
+Parsing entity <UART_Receiver>.
+Parsing architecture <Behavioral> of entity <uart_receiver>.
+Parsing VHDL file "M:\github\fpga\W25Q64JV\MainProgram\SPI_Master.vhd" into library work
+Parsing entity <SPI_Master>.
+Parsing architecture <Behavioral> of entity <spi_master>.
+Parsing VHDL file "M:\github\fpga\W25Q64JV\MainProgram\Output_Data_Collector.vhd" into library work
+Parsing entity <Output_Data_Collector>.
+Parsing architecture <Behavioral> of entity <output_data_collector>.
+Parsing VHDL file "M:\github\fpga\W25Q64JV\MainProgram\Input_Data_Collector.vhd" into library work
+Parsing entity <Input_Data_Collector>.
+Parsing architecture <Behavioral> of entity <input_data_collector>.
+Parsing VHDL file "M:\github\fpga\W25Q64JV\MainProgram\BaudRate_Generator.vhd" into library work
+Parsing entity <BaudRate_Generator>.
+Parsing architecture <Behavioral> of entity <baudrate_generator>.
+Parsing VHDL file "M:\github\fpga\W25Q64JV\MainProgram\MainModule.vhd" into library work
+Parsing entity <MainModule>.
+Parsing architecture <Behavioral> of entity <mainmodule>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <MainModule> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <BaudRate_Generator> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <UART_Receiver> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <Input_Data_Collector> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <SPI_Master> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <Output_Data_Collector> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <UART_Transmitter> (architecture <Behavioral>) with generics from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <MainModule>.
+    Related source file is "M:\github\fpga\W25Q64JV\MainProgram\MainModule.vhd".
+INFO:Xst:3210 - "M:\github\fpga\W25Q64JV\MainProgram\MainModule.vhd" line 66: Output port <done_tick> of the instance <Output_Data_Collector_unit> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <MainModule> synthesized.
+
+Synthesizing Unit <BaudRate_Generator>.
+    Related source file is "M:\github\fpga\W25Q64JV\MainProgram\BaudRate_Generator.vhd".
+        COUNTER_LIMIT = 78
+    Found 7-bit register for signal <counter_reg>.
+    Found 7-bit adder for signal <counter_reg[6]_GND_6_o_add_2_OUT> created at line 1241.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   7 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <BaudRate_Generator> synthesized.
+
+Synthesizing Unit <UART_Receiver>.
+    Related source file is "M:\github\fpga\W25Q64JV\MainProgram\UART_Receiver.vhd".
+        DATA_BIT_COUNT = 8
+        TICK_PER_CYCLE = 16
+    Found 4-bit register for signal <tick_counter_reg>.
+    Found 3-bit register for signal <data_counter_reg>.
+    Found 8-bit register for signal <data_reg>.
+    Found 2-bit register for signal <state_reg>.
+    Found finite state machine <FSM_0> for signal <state_reg>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 12                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 3-bit adder for signal <data_counter_reg[2]_GND_7_o_add_16_OUT> created at line 1241.
+    Found 4-bit adder for signal <tick_counter_reg[3]_GND_7_o_add_29_OUT> created at line 1241.
+    Found 4-bit 4-to-1 multiplexer for signal <tick_counter_next> created at line 58.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  15 D-type flip-flop(s).
+	inferred  11 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <UART_Receiver> synthesized.
+
+Synthesizing Unit <Input_Data_Collector>.
+    Related source file is "M:\github\fpga\W25Q64JV\MainProgram\Input_Data_Collector.vhd".
+        INPUT_DATA_BIT_COUNT = 8
+        TOTAL_INPUT_BIT_LIMIT = 40
+        WRITE_DATA_BIT_LIMIT = 40
+        READ_DATA_BIT_LIMIT = 64
+        MAX_OPERATION_PER_STATE = 5
+    Found 40-bit register for signal <data_reg>.
+    Found 41-bit register for signal <instruction_reg>.
+    Found 6-bit register for signal <write_counter_reg>.
+    Found 6-bit register for signal <read_counter_reg>.
+    Found 3-bit register for signal <counter_reg>.
+    Found 4-bit register for signal <state_reg>.
+    Found finite state machine <FSM_1> for signal <state_reg>.
+    -----------------------------------------------------------------------
+    | States             | 9                                              |
+    | Transitions        | 25                                             |
+    | Inputs             | 12                                             |
+    | Outputs            | 4                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 6-bit adder for signal <write_counter_reg[5]_GND_8_o_add_26_OUT> created at line 1241.
+    Found 6-bit adder for signal <write_counter_reg[5]_GND_8_o_add_32_OUT> created at line 1241.
+    Found 6-bit adder for signal <read_counter_reg[5]_GND_8_o_add_33_OUT> created at line 1241.
+    Found 3-bit adder for signal <counter_reg[2]_GND_8_o_add_34_OUT> created at line 1241.
+    Found 6-bit adder for signal <write_counter_reg[5]_PWR_8_o_add_36_OUT> created at line 1241.
+    Found 3-bit adder for signal <counter_reg[2]_GND_8_o_add_37_OUT> created at line 1241.
+    Found 3-bit subtractor for signal <GND_8_o_GND_8_o_sub_75_OUT<2:0>> created at line 1308.
+    Summary:
+	inferred   7 Adder/Subtractor(s).
+	inferred  96 D-type flip-flop(s).
+	inferred  41 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <Input_Data_Collector> synthesized.
+
+Synthesizing Unit <SPI_Master>.
+    Related source file is "M:\github\fpga\W25Q64JV\MainProgram\SPI_Master.vhd".
+        WRITE_DATA_BIT_LIMIT = 40
+        READ_DATA_BIT_LIMIT = 64
+    Found 40-bit register for signal <instruction_reg>.
+    Found 65-bit register for signal <data_reg>.
+    Found 6-bit register for signal <counter_write_reg>.
+    Found 6-bit register for signal <counter_read_reg>.
+    Found 3-bit register for signal <state_reg>.
+    Found 1-bit register for signal <tx_reg>.
+    Found finite state machine <FSM_2> for signal <state_reg>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 13                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clk (falling_edge)                             |
+    | Reset              | reset (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 6-bit subtractor for signal <GND_9_o_GND_9_o_sub_17_OUT<5:0>> created at line 1308.
+    Found 6-bit subtractor for signal <GND_9_o_GND_9_o_sub_22_OUT<5:0>> created at line 1308.
+    Found 6-bit comparator greater for signal <GND_9_o_counter_read_reg[5]_LessThan_12_o> created at line 86
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred 118 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  11 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <SPI_Master> synthesized.
+
+Synthesizing Unit <Output_Data_Collector>.
+    Related source file is "M:\github\fpga\W25Q64JV\MainProgram\Output_Data_Collector.vhd".
+        READ_DATA_BIT_LIMIT = 64
+        OUTPUT_DATA_BIT_COUNT = 8
+    Found 64-bit register for signal <data_reg>.
+    Found 8-bit register for signal <output_reg>.
+    Found 6-bit register for signal <counter_reg>.
+    Found 3-bit register for signal <state_reg>.
+    Found 1-bit register for signal <output_tick_reg>.
+    Found finite state machine <FSM_3> for signal <state_reg>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 6-bit adder for signal <counter_reg[5]_GND_10_o_add_9_OUT> created at line 1241.
+    Found 6-bit subtractor for signal <GND_10_o_GND_10_o_sub_17_OUT<5:0>> created at line 1308.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  79 D-type flip-flop(s).
+	inferred  39 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <Output_Data_Collector> synthesized.
+
+Synthesizing Unit <UART_Transmitter>.
+    Related source file is "M:\github\fpga\W25Q64JV\MainProgram\UART_Transmitter.vhd".
+        DATA_BIT_COUNT = 8
+        TICK_PER_CYCLE = 16
+    Found 4-bit register for signal <tick_counter_reg>.
+    Found 3-bit register for signal <data_counter_reg>.
+    Found 8-bit register for signal <data_reg>.
+    Found 2-bit register for signal <state_reg>.
+    Found 1-bit register for signal <tx_reg>.
+    Found finite state machine <FSM_4> for signal <state_reg>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 12                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 3-bit adder for signal <data_counter_reg[2]_GND_11_o_add_17_OUT> created at line 1241.
+    Found 4-bit adder for signal <tick_counter_reg[3]_GND_11_o_add_30_OUT> created at line 1241.
+    Found 4-bit 4-to-1 multiplexer for signal <tick_counter_next> created at line 58.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+	inferred  10 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <UART_Transmitter> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 15
+ 3-bit adder                                           : 4
+ 3-bit subtractor                                      : 1
+ 4-bit adder                                           : 2
+ 6-bit adder                                           : 4
+ 6-bit addsub                                          : 1
+ 6-bit subtractor                                      : 2
+ 7-bit adder                                           : 1
+# Registers                                            : 22
+ 1-bit register                                        : 3
+ 3-bit register                                        : 3
+ 4-bit register                                        : 2
+ 40-bit register                                       : 2
+ 41-bit register                                       : 1
+ 6-bit register                                        : 5
+ 64-bit register                                       : 1
+ 65-bit register                                       : 1
+ 7-bit register                                        : 1
+ 8-bit register                                        : 3
+# Comparators                                          : 1
+ 6-bit comparator greater                              : 1
+# Multiplexers                                         : 113
+ 1-bit 2-to-1 multiplexer                              : 56
+ 3-bit 2-to-1 multiplexer                              : 7
+ 4-bit 2-to-1 multiplexer                              : 12
+ 4-bit 4-to-1 multiplexer                              : 2
+ 40-bit 2-to-1 multiplexer                             : 5
+ 41-bit 2-to-1 multiplexer                             : 10
+ 6-bit 2-to-1 multiplexer                              : 12
+ 64-bit 2-to-1 multiplexer                             : 2
+ 65-bit 2-to-1 multiplexer                             : 4
+ 7-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 2
+# FSMs                                                 : 5
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <data_reg_32> of sequential type is unconnected in block <Input_Data_Collector_unit>.
+WARNING:Xst:2677 - Node <data_reg_33> of sequential type is unconnected in block <Input_Data_Collector_unit>.
+WARNING:Xst:2677 - Node <data_reg_34> of sequential type is unconnected in block <Input_Data_Collector_unit>.
+WARNING:Xst:2677 - Node <data_reg_35> of sequential type is unconnected in block <Input_Data_Collector_unit>.
+WARNING:Xst:2677 - Node <data_reg_36> of sequential type is unconnected in block <Input_Data_Collector_unit>.
+WARNING:Xst:2677 - Node <data_reg_37> of sequential type is unconnected in block <Input_Data_Collector_unit>.
+WARNING:Xst:2677 - Node <data_reg_38> of sequential type is unconnected in block <Input_Data_Collector_unit>.
+WARNING:Xst:2677 - Node <data_reg_39> of sequential type is unconnected in block <Input_Data_Collector_unit>.
+
+Synthesizing (advanced) Unit <BaudRate_Generator>.
+The following registers are absorbed into counter <counter_reg>: 1 register on signal <counter_reg>.
+Unit <BaudRate_Generator> synthesized (advanced).
+
+Synthesizing (advanced) Unit <SPI_Master>.
+The following registers are absorbed into counter <counter_write_reg>: 1 register on signal <counter_write_reg>.
+The following registers are absorbed into counter <counter_read_reg>: 1 register on signal <counter_read_reg>.
+Unit <SPI_Master> synthesized (advanced).
+
+Synthesizing (advanced) Unit <UART_Receiver>.
+The following registers are absorbed into counter <data_counter_reg>: 1 register on signal <data_counter_reg>.
+Unit <UART_Receiver> synthesized (advanced).
+
+Synthesizing (advanced) Unit <UART_Transmitter>.
+The following registers are absorbed into counter <data_counter_reg>: 1 register on signal <data_counter_reg>.
+Unit <UART_Transmitter> synthesized (advanced).
+WARNING:Xst:2677 - Node <data_reg_32> of sequential type is unconnected in block <Input_Data_Collector>.
+WARNING:Xst:2677 - Node <data_reg_33> of sequential type is unconnected in block <Input_Data_Collector>.
+WARNING:Xst:2677 - Node <data_reg_34> of sequential type is unconnected in block <Input_Data_Collector>.
+WARNING:Xst:2677 - Node <data_reg_35> of sequential type is unconnected in block <Input_Data_Collector>.
+WARNING:Xst:2677 - Node <data_reg_36> of sequential type is unconnected in block <Input_Data_Collector>.
+WARNING:Xst:2677 - Node <data_reg_37> of sequential type is unconnected in block <Input_Data_Collector>.
+WARNING:Xst:2677 - Node <data_reg_38> of sequential type is unconnected in block <Input_Data_Collector>.
+WARNING:Xst:2677 - Node <data_reg_39> of sequential type is unconnected in block <Input_Data_Collector>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 10
+ 3-bit adder                                           : 2
+ 3-bit subtractor                                      : 1
+ 4-bit adder                                           : 2
+ 6-bit adder                                           : 4
+ 6-bit addsub                                          : 1
+# Counters                                             : 5
+ 3-bit up counter                                      : 2
+ 6-bit down counter                                    : 2
+ 7-bit up counter                                      : 1
+# Registers                                            : 298
+ Flip-Flops                                            : 298
+# Comparators                                          : 1
+ 6-bit comparator greater                              : 1
+# Multiplexers                                         : 249
+ 1-bit 2-to-1 multiplexer                              : 200
+ 3-bit 2-to-1 multiplexer                              : 5
+ 4-bit 2-to-1 multiplexer                              : 12
+ 4-bit 4-to-1 multiplexer                              : 2
+ 40-bit 2-to-1 multiplexer                             : 3
+ 41-bit 2-to-1 multiplexer                             : 10
+ 6-bit 2-to-1 multiplexer                              : 10
+ 64-bit 2-to-1 multiplexer                             : 1
+ 65-bit 2-to-1 multiplexer                             : 4
+ 8-bit 2-to-1 multiplexer                              : 2
+# FSMs                                                 : 5
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <UART_Receiver_unit/FSM_0> on signal <state_reg[1:2]> with gray encoding.
+---------------------
+ State   | Encoding
+---------------------
+ idle    | 00
+ start   | 01
+ receive | 11
+ stop    | 10
+---------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <Input_Data_Collector_unit/FSM_1> on signal <state_reg[1:4]> with user encoding.
+------------------------------------
+ State                  | Encoding
+------------------------------------
+ idle                   | 0000
+ instruction            | 0001
+ instruction_identifier | 0010
+ status                 | 0011
+ status_identifier      | 0100
+ address                | 0101
+ address_identifier     | 0110
+ shift                  | 0111
+ finish                 | 1000
+------------------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <SPI_Master_unit/FSM_2> on signal <state_reg[1:3]> with user encoding.
+-----------------------
+ State     | Encoding
+-----------------------
+ idle      | 000
+ start     | 001
+ sending   | 010
+ receiving | 011
+ lastbit   | 100
+ shift     | 101
+ finish    | 110
+-----------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <Output_Data_Collector_unit/FSM_3> on signal <state_reg[1:3]> with user encoding.
+-----------------------
+ State     | Encoding
+-----------------------
+ idle      | 000
+ start     | 001
+ firstbyte | 010
+ send      | 011
+ finish    | 100
+-----------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <UART_Transmitter_unit/FSM_4> on signal <state_reg[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ idle  | 00
+ start | 01
+ send  | 11
+ stop  | 10
+-------------------
+
+Optimizing unit <MainModule> ...
+
+Optimizing unit <UART_Receiver> ...
+
+Optimizing unit <Input_Data_Collector> ...
+
+Optimizing unit <SPI_Master> ...
+
+Optimizing unit <Output_Data_Collector> ...
+
+Optimizing unit <UART_Transmitter> ...
+WARNING:Xst:1710 - FF/Latch <Input_Data_Collector_unit/counter_reg_2> (without init value) has a constant value of 0 in block <MainModule>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block MainModule, actual ratio is 10.
+FlipFlop Input_Data_Collector_unit/state_reg_FSM_FFd1 has been replicated 4 time(s)
+FlipFlop SPI_Master_unit/state_reg_FSM_FFd1 has been replicated 3 time(s)
+FlipFlop SPI_Master_unit/state_reg_FSM_FFd2 has been replicated 3 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 346
+ Flip-Flops                                            : 346
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : MainModule.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 611
+#      INV                         : 9
+#      LUT2                        : 20
+#      LUT3                        : 140
+#      LUT4                        : 123
+#      LUT5                        : 100
+#      LUT6                        : 217
+#      MUXF7                       : 2
+# FlipFlops/Latches                : 346
+#      FDC                         : 38
+#      FDC_1                       : 10
+#      FDCE                        : 193
+#      FDCE_1                      : 105
+# Clock Buffers                    : 1
+#      BUFG                        : 1
+# IO Buffers                       : 8
+#      IBUF                        : 4
+#      OBUF                        : 4
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             346  out of  11440     3%  
+ Number of Slice LUTs:                  609  out of   5720    10%  
+    Number used as Logic:               609  out of   5720    10%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    624
+   Number with an unused Flip Flop:     278  out of    624    44%  
+   Number with an unused LUT:            15  out of    624     2%  
+   Number of fully used LUT-FF pairs:   331  out of    624    53%  
+   Number of unique control sets:        17
+
+IO Utilization: 
+ Number of IOs:                           8
+ Number of bonded IOBs:                   8  out of    102     7%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | IBUF+BUFG              | 346   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 7.236ns (Maximum Frequency: 138.198MHz)
+   Minimum input arrival time before clock: 5.164ns
+   Maximum output required time after clock: 6.676ns
+   Maximum combinational path delay: 6.066ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 7.236ns (frequency: 138.198MHz)
+  Total number of paths / destination ports: 16327 / 643
+-------------------------------------------------------------------------
+Delay:               7.236ns (Levels of Logic = 5)
+  Source:            BaudRate_Generator_unit/counter_reg_3 (FF)
+  Destination:       Output_Data_Collector_unit/data_reg_63 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: BaudRate_Generator_unit/counter_reg_3 to Output_Data_Collector_unit/data_reg_63
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.525   1.104  BaudRate_Generator_unit/counter_reg_3 (BaudRate_Generator_unit/counter_reg_3)
+     LUT3:I0->O            6   0.235   0.876  BaudRate_Generator_unit/Mcount_counter_reg421 (BaudRate_Generator_unit/Mcount_counter_reg4_bdd2)
+     LUT5:I4->O           18   0.254   1.235  baudrate_generator_tick1 (baudrate_generator_tick)
+     LUT4:I3->O            7   0.254   0.910  UART_Transmitter_unit/Mmux_tx_done_tick11 (uart_transmitter_done_tick)
+     LUT5:I4->O           19   0.254   1.261  Output_Data_Collector_unit/_n0114_inv1_rstpot_2 (Output_Data_Collector_unit/_n0114_inv1_rstpot2)
+     LUT3:I2->O            1   0.254   0.000  Output_Data_Collector_unit/data_reg_53_dpot (Output_Data_Collector_unit/data_reg_53_dpot)
+     FDCE:D                    0.074          Output_Data_Collector_unit/data_reg_53
+    ----------------------------------------
+    Total                      7.236ns (1.850ns logic, 5.386ns route)
+                                       (25.6% logic, 74.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 353 / 353
+-------------------------------------------------------------------------
+Offset:              5.164ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       BaudRate_Generator_unit/counter_reg_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to BaudRate_Generator_unit/counter_reg_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.328   0.681  reset_IBUF (reset_IBUF)
+     INV:I->O            346   0.255   2.441  reset_inv1_INV_0 (Input_Data_Collector_unit/reset_inv)
+     FDCE:CLR                  0.459          Input_Data_Collector_unit/data_reg_0
+    ----------------------------------------
+    Total                      5.164ns (2.042ns logic, 3.122ns route)
+                                       (39.5% logic, 60.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 7 / 4
+-------------------------------------------------------------------------
+Offset:              6.676ns (Levels of Logic = 2)
+  Source:            SPI_Master_unit/state_reg_FSM_FFd2 (FF)
+  Destination:       cs (PAD)
+  Source Clock:      clk falling
+
+  Data Path: SPI_Master_unit/state_reg_FSM_FFd2 to cs
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q          131   0.525   2.304  SPI_Master_unit/state_reg_FSM_FFd2 (SPI_Master_unit/state_reg_FSM_FFd2)
+     LUT3:I2->O            1   0.254   0.681  SPI_Master_unit/state_reg_cs1 (cs_OBUF)
+     OBUF:I->O                 2.912          cs_OBUF (cs)
+    ----------------------------------------
+    Total                      6.676ns (3.691ns logic, 2.985ns route)
+                                       (55.3% logic, 44.7% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               6.066ns (Levels of Logic = 3)
+  Source:            clk (PAD)
+  Destination:       sclk (PAD)
+
+  Data Path: clk to sclk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.328   0.910  clk_IBUF (clk_IBUF)
+     LUT3:I0->O            1   0.235   0.681  SPI_Master_unit/Mmux_sclk11 (sclk_OBUF)
+     OBUF:I->O                 2.912          sclk_OBUF (sclk)
+    ----------------------------------------
+    Total                      6.066ns (4.475ns logic, 1.591ns route)
+                                       (73.8% logic, 26.2% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    7.236|    3.418|    5.530|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 14.39 secs
+ 
+--> 
+
+Total memory usage is 4501960 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   17 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

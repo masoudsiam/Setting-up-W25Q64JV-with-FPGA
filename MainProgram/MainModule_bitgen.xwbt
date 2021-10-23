@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=M:\github\fpga\W25Q64JV\MainProgram\MainModule.ncd
+OUTFILE=M:\github\fpga\W25Q64JV\MainProgram\MainModule.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=M:\github\fpga\W25Q64JV\MainProgram
+LICENSE=WebPack
+USER_INFO=__0_0_0

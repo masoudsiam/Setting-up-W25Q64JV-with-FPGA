@@ -1,0 +1,2 @@
+vhdl isim_temp "SPI_Master.vhd"
+vhdl isim_temp "SPI_Master_sim.vhd"

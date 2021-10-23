@@ -1,0 +1,15 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sun Sep 05 12:37:13 2021
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "cs" LOCATE = SITE "P85" LEVEL 1;
+COMP "rx" LOCATE = SITE "P111" LEVEL 1;
+COMP "tx" LOCATE = SITE "P112" LEVEL 1;
+COMP "clk" LOCATE = SITE "P50" LEVEL 1;
+COMP "miso" LOCATE = SITE "P83" LEVEL 1;
+COMP "sclk" LOCATE = SITE "P81" LEVEL 1;
+COMP "mosi" LOCATE = SITE "P79" LEVEL 1;
+COMP "reset" LOCATE = SITE "P133" LEVEL 1;
+SCHEMATIC END;
+
