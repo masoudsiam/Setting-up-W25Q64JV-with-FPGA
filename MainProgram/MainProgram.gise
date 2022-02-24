@@ -262,11 +262,14 @@
     <transform xil_pn:end_ts="1630488259" xil_pn:in_ck="-3400164085338294377" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="2101622604095161539" xil_pn:start_ts="1630488259">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
     </transform>
     <transform xil_pn:end_ts="1630829225" xil_pn:in_ck="861429239270149134" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="4424247788674829350" xil_pn:start_ts="1630829220">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="MainModule.bld"/>
       <outfile xil_pn:name="MainModule.ngd"/>
@@ -277,8 +280,10 @@
     <transform xil_pn:end_ts="1630829235" xil_pn:in_ck="7067093454536571241" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1448924893915930207" xil_pn:start_ts="1630829225">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="MainModule.pcf"/>
       <outfile xil_pn:name="MainModule_map.map"/>
@@ -293,7 +298,9 @@
     <transform xil_pn:end_ts="1630829247" xil_pn:in_ck="-5017764469040412222" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="93661965788626211" xil_pn:start_ts="1630829235">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="MainModule.ncd"/>
       <outfile xil_pn:name="MainModule.pad"/>
       <outfile xil_pn:name="MainModule.par"/>
@@ -328,7 +335,9 @@
     <transform xil_pn:end_ts="1630829247" xil_pn:in_ck="3617823995896750565" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1630829242">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="MainModule.twr"/>
       <outfile xil_pn:name="MainModule.twx"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
